@@ -5,6 +5,10 @@ import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   bgUrl = ''
+  weather = 0
+  
+  quote = ''
+  author = ''
   /** @type {Value[]} */
   values = []
   /** @type {ToDo[]} */

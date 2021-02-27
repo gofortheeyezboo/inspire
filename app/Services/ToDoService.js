@@ -14,7 +14,7 @@ class ToDoService {
             console.log(res);
             ProxyState.todos = res.data.map(rawToDo => new ToDo(rawToDo))
             ProxyState.todos.forEach(t => {
-                ProxyState.numToDos++
+                ProxyState.numToDos = ProxyState.todos.length
             });
           } catch (error) {
             console.error(error)

@@ -2,7 +2,6 @@ import { ProxyState } from "../AppState.js"
 import { toDoService } from "../Services/ToDoService.js"
 
   function _draw(){
-    document.body.style.backgroundImage = `url('${ProxyState.bgUrl}')`
     let todos = ProxyState.todos
     let template = ""
     
@@ -16,6 +15,7 @@ export default class ToDoController{
   constructor(){
     _draw()
     ProxyState.on("todos", _draw)
+    ProxyState.on('numToDos', _draw)
   }
 
   createToDo(event){
